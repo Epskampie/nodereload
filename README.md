@@ -1,6 +1,6 @@
 # nodereload
 
-NodeReload is a simple LiveReload implementation using node.js for Windows 7. It allows you to use the LiveReload browser extensions without the LiveReload native program.
+NodeReload is an simple alternative LiveReload implementation for Windows 7 using node.js. It allows you to use the LiveReload browser extensions without the LiveReload native program.
 
 This is intended to be a temporary fix, until the LiveReload binaries for Windows are up to scratch.
 
