@@ -17,8 +17,8 @@ This is intended to be a temporary fix, until the LiveReload binaries for Window
 
 * Install a LiveReload browser extension: http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
 * Install node.js for windows: http://nodejs.org/
-* Download and upzip nodereload.zip: 
+* Download and upzip this project: https://github.com/Epskampie/nodereload/zipball/master
 * Add the directories you want to watch to the top of nodereload__.js__ (instructions inside).
 * Execute nodereload__.bat__
 * Start the browser extension.
-* Watch as your browser automatically refreshes as you change files.
+* Watch as your browser automatically refreshes as you change a file in one of the watched directories.

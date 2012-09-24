@@ -1,12 +1,13 @@
 var directories = [
-  'C:\\Simon\\Werk\\Frontwise\\UltrabooksMatrix\\src',
-  'C:\\Simon\\Werk\\Frontwise\\UltrabooksMatrix\\web\\',
-  'C:\\Simon\\Werk\\Frontwise\\UltrabooksMatrix\\app\\config',
+  // Put the directories you want to watch here.
+  // Dont forget to use forward slashed / or escaped backslashes \\\\
+  // Uncomment the next lines for an example
 
-  'C:\\Simon\\Werk\\Frontwise\\Website\\src',
-  'C:\\Simon\\Werk\\Frontwise\\Website\\web',
-  'C:\\Simon\\Werk\\Frontwise\\Website\\app\\config',
+  //'C:\\Users\\Simon\\Documents\\MyProject1',
+  //'C:\\Users\\Simon\\Documents\\MyProject2',
 ];
+
+// Don't edit below here.
 
 var WebSocketServer = require('websocket').server;
 var http = require('http');
