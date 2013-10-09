@@ -83,25 +83,41 @@ server.listen(35729, function() {
         console.log('done walking');
       } else if (event == 'change') {
         console.log('change', event, filename);
-        sendReload(filename, true);
+        scheduleReload(filename, true);
       } else {
         console.log('unknown', event, filename);
-        sendReload(filename, false);
+        scheduleReload(filename, false);
       }
     });
   }
 
 });
 
-function sendReload(file, liveCss){
+
+var scheduleTimeout = null;
+var scheduleLiveCss = false;
+var scheduleFiles = [];
+
+function scheduleReload(file, liveCss){
+  clearTimeout(scheduleTimeout);
+  scheduleLiveCss = scheduleLiveCss || liveCss;
+  scheduleFiles.push(file);
+  scheduleTimeout = setTimeout(sendReload, 100); // Delay for a few milliseconds, to see if any more arrive
+  console.log('delaying');
+}
+
+function sendReload(){
   if (connected) {
 
     var payload = JSON.stringify({
       command: 'reload',
-      path: file,   // as full as possible/known, absolute path preferred, file name only is OK
-      liveCSS: liveCss === true // false to disable live CSS refresh
+      path: scheduleFiles[0],   // as full as possible/known, absolute path preferred, file name only is OK
+      liveCSS: scheduleLiveCss === true // false to disable live CSS refresh
     });
     connection.sendUTF(payload);
+    
+    scheduleLiveCss = false;
+    scheduleFiles = [];
 
     console.log('sending:', payload);
   }
