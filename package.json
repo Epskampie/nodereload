@@ -1,0 +1,25 @@
+{
+  "name": "NodeReload",
+  "version": "0.0.0",
+  "description": "NodeReload is a simple alternative LiveReload implementation for Windows 7 using node.js. It allows you to use the LiveReload browser extensions without the LiveReload native program.",
+  "main": "nodereload.js",
+  "dependencies": {
+    "keypress": "^0.2.1",
+    "watch": "^0.5.1",
+    "websocket": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Epskampie/nodereload.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Epskampie/nodereload/issues"
+  },
+  "homepage": "https://github.com/Epskampie/nodereload"
+}
